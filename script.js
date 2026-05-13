@@ -1,5 +1,7 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
+const scoreElement = document.getElementById('score-value');
+let score = 0;
 
 const jump = () => {
     mario.classList.add('jump'); // เพิ่มคลาส jump เพื่อเล่น Animation
@@ -8,7 +10,10 @@ const jump = () => {
         mario.classList.remove('jump'); // ลบคลาสออกเมื่อกระโดดเสร็จ (500ms)
     }, 500);
 }
-
+const scoreInterval = setInterval(() => {
+    score++;
+    scoreElement.innerText = score;
+}, 100);
 // ตรวจสอบการชน (Check Collision) ทุกๆ 10 มิลลิวินาที
 const loop = setInterval(() => {
     const pipePosition = pipe.offsetLeft;
@@ -31,6 +36,7 @@ const loop = setInterval(() => {
         mario.style.marginLeft = '50px';
 
         clearInterval(loop); // หยุดการทำงานของ Loop
+        clearInterval(scoreInterval);
         alert('Game Over!');
     }
 }, 10);
