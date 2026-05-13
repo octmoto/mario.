@@ -39,7 +39,7 @@
     bottom: 0;
     width: 80px;
     right: -80px;
-    animation: pipe-animation 1.5s infinite linear;
+    animation: pipe-animation 3s infinite linear;
     z-index: 2;
 }
 
@@ -53,7 +53,7 @@
 
 /* คลาสสำหรับสั่งกระโดด */
 .jump {
-    animation: jump-animation 500ms ease-out;
+    animation: jump-animation 800ms ease-out;
 }
 
 /* อนิเมชันท่อวิ่ง */

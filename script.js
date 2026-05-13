@@ -8,14 +8,14 @@ let score = 0;
 const scoreInterval = setInterval(() => {
     score++;
     scoreElement.innerText = score;
-}, 100);
+}, 1000);
 
 // ฟังก์ชันสั่งมาริโอ้กระโดด
 const jump = () => {
     mario.classList.add('jump'); 
     setTimeout(() => {
         mario.classList.remove('jump'); 
-    }, 500);
+    }, 800);
 }
 
 // ตรวจสอบการชนกันระหว่างมาริโอ้กับท่อ
